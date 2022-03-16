@@ -1,0 +1,32 @@
+.image-wrapper .img-fluid {
+    max-width: 100%;
+    height: 140px !important;
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+.image-wrapper .img-fluid {
+    max-width: 100%;
+    height: 140px !important;
+}
+}
+
+element.style {
+    text-align: center;
+    justify-content: flex-end;
+}
+
+@media (min-width: 320px) and (max-width: 767.98px) {
+    .image-wrapper .img-fluid {
+    max-width: 100%;
+    height: auto !important;
+    }
+}
+
+.sticky-section{
+  position:sticky;
+  position:-webkit-sticky;
+  top:0px;
+}
+
+

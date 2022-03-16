@@ -1,0 +1,15 @@
+.button{
+    color: #fff;
+    background-color: #993366;
+
+}
+
+.active{
+    background-color:#993366 !important;
+    color:#fff !important
+}
+
+.btn-check:focus+.btn, .btn:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0rem rgb(13 110 253 / 25%)!important;
+}
