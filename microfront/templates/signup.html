@@ -5,8 +5,7 @@
 
     <form action="/signup" method="POST">
         {{form.hidden_tag()}}
-        <h1>Welcome to CampFood web app!</h1>
-        <h3>Signup</h3>
+        <h1>Welcome to CampFood web app! Signup</h1>
 
         <div class="col-12 my-1">{{form.fullname.label(class="form-label")}}</div>
         <div class="col-12 my-0">{{form.fullname(class="form-control", style="width: 400px")}}</div>
@@ -20,6 +19,14 @@
         <div class="col-12 my-0">{{form.username(class="form-control", style="width: 400px")}}</div>
         <ul>
             {% for error in form.username.errors %}
+            <li style="color:black;">{{error}}</li>
+            {% endfor %}
+        </ul>
+
+        <div class="col-12 my-2">{{form.email.label(class="form-label")}}</div>
+        <div class="col-12 my-0">{{form.email(class="form-control", style="width: 400px")}}</div>
+        <ul>
+            {% for error in form.email.errors %}
             <li style="color:black;">{{error}}</li>
             {% endfor %}
         </ul>
