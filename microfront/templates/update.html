@@ -1,10 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% block Signup %} Update -  {% endblock Signup %}
+{% block body %}
 
-</body>
-</html>
+<div class="container my-4" style="width: 700px;">
+
+    <form action="/update" method="POST">
+        {{form.hidden_tag()}}
+        <h3>Update Profile</h3>
+<!--, value = record.username-->
+        <div class="col-12 my-3">{{form.username.label(class="form-label")}}</div>
+        <div class="col-12">{{form.username(class="form-control", style="width: 400px")}}</div>
+        <ul>
+            {% for error in form.username.errors %}
+            <li style="color:black;">{{error}}</li>
+            {% endfor %}
+        </ul>
+
+        <div class="col-12 my-3">{{form.current_password.label(class="form-label")}}</div>
+        <div class="col-12">{{form.current_password(class="form-control", style="width: 400px")}}</div>
+        <ul>
+            {% for msg in get_flashed_messages() %}
+                <li style="color:black;">{{ msg }}</li>
+            {% endfor %}
+        </ul>
+        <ul>
+            {% for error in form.current_password.errors %}
+            <li style="color:black;">{{error}}</li>
+            {% endfor %}
+        </ul>
+
+        <div class="col-12 my-3">{{form.new_password.label(class="form-label")}}</div>
+        <div class="col-12 my-0">{{form.new_password(class="form-control", style="width: 400px")}}</div>
+
+        <div class="col-12 my-3">{{form.confirm_password.label(class="form-label")}}</div>
+        <div class="col-12 my-0">{{form.confirm_password(class="form-control", style="width: 400px")}}</div>
+        <ul>
+            {% for error in form.new_password.errors %}
+            <li style="color:black;">{{error}}</li>
+            {% endfor %}
+        </ul>
+
+        <div class="md-3 my-3" style="width:800 px">
+                <a href="/home" type="button" class="btn btn-primary btn-sm mx-2">back</a>
+                <button class="btn btn-primary btn-sm mx-1" type="submit">Update</button>
+        </div>
+
+    </form>
+</div>
+
+{% endblock body %}

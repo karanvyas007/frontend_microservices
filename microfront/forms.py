@@ -50,3 +50,14 @@ class LoginForm(FlaskForm):
     username = StringField("username", validators=[InputRequired()], render_kw={"placeholder": "username"})
     password = PasswordField("Password", validators=[InputRequired()], render_kw={"placeholder": "Password"})
     submit = SubmitField("Login Successfully!")
+
+
+class UpdateForm(FlaskForm):
+    username = StringField("username", render_kw={"placeholder": "username"})
+    current_password = PasswordField("current Password", render_kw={"placeholder": "current password"})
+    new_password = PasswordField("New Password", validators=[EqualTo("confirm_password")],
+                                 render_kw={"placeholder": "new password"})
+    confirm_password = PasswordField("Confirm Password",
+                                     render_kw={"placeholder": "confirm password"})
+    submit = SubmitField("Login Successfully!")
+
