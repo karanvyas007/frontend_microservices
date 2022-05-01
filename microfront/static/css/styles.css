@@ -86,3 +86,7 @@
 .dropdown-menu{
 z-index: 9999 !important;
 }
+
+.basket{
+    list-style-type: none;
+}

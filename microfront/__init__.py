@@ -1,8 +1,5 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-# import config
-
-from flask_login import LoginManager
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'campfood'

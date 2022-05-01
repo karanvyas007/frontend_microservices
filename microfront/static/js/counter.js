@@ -6,13 +6,14 @@ var data = 0;
 //creation of increment function
 let incr_count;
 function increment(ele) {
- 	incr_count = ele.previousElementSibling.children[0];
+ 	let incr_count = ele.previousElementSibling.children[0];
  	incr_count.innerHTML = parseInt(incr_count.innerHTML) + 1;
  	console.log(incr_count.innerHTML);
 }
 
 //creation of decrement function
 function decrement(ele) {
+let incr_count = document.getElementById('counting '+ele);
     if(incr_count.innerHTML != 0){
  	    incr_count.innerHTML = parseInt(incr_count.innerHTML) - 1;
  	    console.log(incr_count.innerHTML);
